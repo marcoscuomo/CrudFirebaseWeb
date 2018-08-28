@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crud Firebase Web</title>
 
-2    <!--Firebase-->
+2    <!--Firebase-->    
     <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
     <script>
     // Initialize Firebase
     var config = {
-        apiKey: "AIzaSyA9S4a3OQQKClNHfmFc64ZZ90LSNAtLIJI",
-        authDomain: "crud-web-b8679.firebaseapp.com",
-        databaseURL: "https://crud-web-b8679.firebaseio.com",
-        projectId: "crud-web-b8679",
-        storageBucket: "crud-web-b8679.appspot.com",
-        messagingSenderId: "985033435885"
+        apiKey: "AIzaSyA88NC_V15K5VI4hKTbwMKPrS30cEyzoKM",
+        authDomain: "crud-firebase-cd0de.firebaseapp.com",
+        databaseURL: "https://crud-firebase-cd0de.firebaseio.com",
+        projectId: "crud-firebase-cd0de",
+        storageBucket: "crud-firebase-cd0de.appspot.com",
+        messagingSenderId: "850243249233"
     };
     firebase.initializeApp(config);
     </script>
@@ -24,6 +24,22 @@
 
 </head>
 <body>
+
+    <table>
+        <tr>
+            <td>Id: </td>
+            <td><input type="text" name="id" id="user_id"/></td>
+        </tr>
+        <tr>
+                <td>Usuário: </td>
+                <td><input type="text" name="user_name" id="user_name"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="Salvar"/>
+            </td>
+        </tr>        
+    </table>
     
 </body>
 </html>
