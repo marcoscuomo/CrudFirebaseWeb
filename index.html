@@ -60,17 +60,43 @@
         var user_id     = document.getElementById('user_id').value;
 
         function save_user(){
+            
+            var uid = firebase.databaseRef.ref().child('users').push().key;
+
+            var data = {
+                user_id: uid, 
+                user_name: user_name
+            }
+            var updates = {};
+            updates['/users/' + uid] = data;
+            firebase.database().ref().update(updates);
+
+            alert('Usuário criado com sucesso');
+            reload_page();
 
         }
         function update_user(){
-            
+            var data = {
+                user_id = user_id,
+                user_name = user_name
+            }
+
+            var updates = {};
+            updates['/users/' + user_id] = data;
+            firebase.database().ref().update(updates);
+
+            alert('O usuario foi atualizado com sucesso'); 
+
+            reload_page();
+
         }
         function delete_user(){
-            
+            firebase.database().ref().child('/users/' + id).remove();
+            alert('O usuario foi deletado com sucesso');    
         }
 
         function reload_page(){
-
+            window.location.reload();        
         }
 
     
